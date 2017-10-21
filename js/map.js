@@ -1578,7 +1578,7 @@ var getRooms = function (callback) {
                 "type_id": 1,
                 "template_category": {"id": 5, "icon": "\/img\/wall.svg"}
             }
-        },  {
+        }, {
             "room": 107,
             "id": 190,
             "top": "686px",
@@ -1998,7 +1998,21 @@ var initObjFromImg = function () {
 
         $addedDiv.append(window.objArr[i]);
     }
+
+    $('#img-construct').append($('<div id="paths"></div>'));
 }
+
+var test = function () {
+    window.index = 11;
+    var op = function () {
+        if (window.index < 22) {
+            $('.free-table[data-room="' + window.index + '"]').fadeOut();
+            window.index++;
+            setTimeout(op, 200)
+        }
+    };
+    op();
+};
 
 var imageInit = function (callback) {
     var src = '/img/1floor.png';
