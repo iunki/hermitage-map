@@ -1,0 +1,57 @@
+
+html,
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+}
+
+.frame{
+    height: 1000px;
+    width: 1000px;
+}
+
+#img-container {
+    /*JЧЕНЬ ВАЖНО НЕ УДАЛЯЙ АБСОЛЮТНУЮ ПОЗИЦИЮ VK ТУПИТ*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    margin-top: 70px;
+}
+
+#img-container #img-construct {
+    /*transition: all 0.3s ease-out;*/
+}
+
+
+.free-table {
+    position: absolute;
+    /* border: 4px solid rgba(51, 200, 51, 0.81); */
+    /* border-radius: 5px; */
+    /*background-color: blue;*/
+    z-index: 100;
+}
+
+.free-table > div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.free-table .room-text{
+    position: absolute;
+    font-size: 20px;
+    top: calc(50% - 10px);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.bg-pattern {
+    background: url(/img/pattern-gray.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
