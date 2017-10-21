@@ -20,7 +20,7 @@ body {
     /*transition: all 0.3s ease-out;*/
 }
 
-#paths{
+#paths {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ body {
     filter: brightness(0.4);
 }
 
-.tablo{
+.tablo {
     position: absolute;
     z-index: 1000;
     width: 50px;
@@ -41,7 +41,7 @@ body {
     border: 3px solid #494949;
 }
 
-.top{
+.top {
     z-index: 100 !important;
 }
 
@@ -53,13 +53,13 @@ body {
     z-index: 10;
 }
 
-.free-table > div{
+.free-table > div {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.free-table .room-text{
+.free-table .room-text {
     position: absolute;
     font-size: 20px;
     top: calc(50% - 10px);
@@ -85,11 +85,13 @@ body {
     /* you could also use milliseconds (ms) or something like 2.5s */
     -webkit-animation: colorchange 2s infinite;
 }
+
 [class*="icono"]:after,
 [class*="icono"]:before {
     content: "";
     box-sizing: border-box;
 }
+
 [class*="icono-arrow1"] {
     width: 20px;
     height: 20px;
@@ -97,6 +99,7 @@ body {
     border-style: solid;
     margin: 15px;
 }
+
 [class*="icono-arrow1"]:before {
     right: 0;
     top: -3px;
@@ -114,45 +117,82 @@ body {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
 [class*="icono-arrow1"][class*="-left"][class*="-up"] {
     -webkit-transform: none;
     transform: none;
 }
+
 [class*="icono-arrow1"][class*="-left"][class*="-down"] {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
 [class*="icono-arrow1"][class*="-right"] {
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
+
 [class*="icono-arrow1"][class*="-right"][class*="-up"] {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
+
 [class*="icono-arrow1"][class*="-right"][class*="-down"] {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
 [class*="icono-arrow1"][class*="-up"] {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
+
 [class*="icono-arrow1"][class*="-down"] {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
 
-@keyframes colorchange
-{
-    0%   {color: green;}
-    50% {color: #79d44c;}
-    100% {color: green;}
+@keyframes colorchange {
+    0% {
+        color: green;
+    }
+    50% {
+        color: #79d44c;
+    }
+    100% {
+        color: green;
+    }
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
 {
-    0%   {color: green;}
-    50% {color: #79d44c;}
-    100% {color: green;}
+    0% {
+        color: green;
+    }
+    50% {
+        color: #79d44c;
+    }
+    100% {
+        color: green;
+    }
 }
+
+#modal-wrapper {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal{
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    background-color: #fff;
+}
+
