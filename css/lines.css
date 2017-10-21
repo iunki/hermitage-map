@@ -7,6 +7,28 @@ body {
     font-family: Roboto-Light, serif;
 }
 
+.header{
+    border-bottom: 1px solid #929597;
+    background-color: #D3D7DA;
+
+}
+
+#rooms{
+    width: 100%;
+    /*table-layout: fixed;*/
+}
+
+#rooms td{
+    padding: 2px 5px;
+    font-size: 10px;
+}
+#rooms td > span{
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #img-container {
     /*JЧЕНЬ ВАЖНО НЕ УДАЛЯЙ АБСОЛЮТНУЮ ПОЗИЦИЮ VK ТУПИТ*/
     position: relative;
