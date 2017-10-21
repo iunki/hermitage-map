@@ -5,38 +5,81 @@ var linesArrObj = [];
 
 var tabloArr = [
     {
-        id: 0,
+        id: 1,
         left: 682,
         top: 206,
     },
     {
-        id: 1,
+        id: 2,
         left: 318,
         top: 197,
     },
     {
-        id: 2,
+        id: 3,
         left: 247,
         top: 625,
     },
     {
-        id: 3,
+        id: 4,
         left: 247,
         top: 890,
     },
     {
-        id: 4,
+        id: 0,
         left: 1062,
         top: 620,
     }
 ];
 
 var getLoad = function (callback) {
+    var state = {
+        "0": {
+            "up": '',
+            "down": 'icono-arrow1-up',
+            "0": 'icono-arrow1-down',
+            "1": 'icono-arrow1-left',
+        },
+        "1": {
+            "up": 'icono-arrow1-left',
+            "down": 'icono-arrow1-right',
+            "0": '',
+            "1": '',
+        },
+        "2": {
+            "up": 'icono-arrow1-left',
+            "down": 'icono-arrow1-down',
+            "0": 'icono-arrow1-right-up',
+            "1": '',
+        },
+        "3": {
+            "up": 'icono-arrow1-up',
+            "down": 'icono-arrow1-down',
+            "0": 'icono-arrow1-left',
+            "1": '',
+        },
+        "4": {
+            "up": 'icono-arrow1-up',
+            "down": '',
+            "0": 'icono-arrow1-right-down',
+            "1": 'icono-arrow1-left-down',
+        }
+    };
     $.ajax({
         url: 'http://172.19.245.109/table',
         method: 'GET',
         success: function (data) {
+            data = JSON.parse(data);
             console.log(data);
+            for (var i = 0; i < data.length; i++) {
+
+                var className = '';
+                if (data[i].type == 1) {
+                    className = state[data[i].table_id][data[i].id]
+                } else {
+                    className = state[data[i].table_id][data[i].side]
+                }
+                var $elem = $('.tablo[data-id="' + data[i].table_id + '"] > i').removeClass().addClass(className);
+            }
         }
     })
 };
@@ -1970,7 +2013,6 @@ $(function () {
         }, 2000);
     });
 
-    getLoad();
 
 
 });
@@ -2017,7 +2059,7 @@ var makeDivByObject = function (obj, index) {
 };
 
 var makeTabloObj = function (obj) {
-    var $newObj = $("<div class='tablo'><i class='icono-arrow1-right-up'></i></div>");
+    var $newObj = $("<div class='tablo'><i></i></div>");
     $newObj.attr("data-id", obj.id);
     $newObj.css("left", obj.left);
     $newObj.css("right", obj.right);
@@ -2050,10 +2092,13 @@ var initObjFromImg = function () {
     }
 
     $('#img-construct').append($('<div id="paths"></div>'));
+
     for (var i = 0; i < tabloArr.length; i++) {
         $('#img-construct').append(makeTabloObj(tabloArr[i]));
     }
-}
+    getLoad();
+};
+
 
 var test = function () {
     window.index = 11;
