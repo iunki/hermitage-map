@@ -2104,7 +2104,9 @@ var test = function () {
     window.index = 11;
     var op = function () {
         if (window.index < 22) {
-            $('.free-table.top[data-room="' + window.index + '"]').fadeOut();
+            $('.free-table.top[data-room="' + window.index + '"]').animate({
+                opacity: 0
+            },200);
             window.index++;
             setTimeout(op, 200)
         }
