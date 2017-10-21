@@ -3,6 +3,44 @@
 
 var linesArrObj = [];
 
+var tabloArr = [
+    {
+        id: 0,
+        left: 682,
+        top: 206,
+    },
+    {
+        id: 1,
+        left: 318,
+        top: 197,
+    },
+    {
+        id: 2,
+        left: 247,
+        top: 625,
+    },
+    {
+        id: 3,
+        left: 247,
+        top: 890,
+    },
+    {
+        id: 4,
+        left: 1062,
+        top: 620,
+    }
+];
+
+var getLoad = function (callback) {
+    $.ajax({
+        url: 'http://172.19.245.109/table',
+        method: 'GET',
+        success: function (data) {
+            console.log(data);
+        }
+    })
+};
+
 var getRooms = function (callback) {
     /*$.getJSON('http://localhost/rooms.json', function(data) {
      linesArrObj = data;
@@ -1930,7 +1968,9 @@ $(function () {
             });
 
         }, 2000);
-    })
+    });
+
+    getLoad();
 
 
 });
@@ -1938,7 +1978,7 @@ $(function () {
 
 var makeDivByObject = function (obj, index) {
 
-    var $newObj = $("<div class='free-table'></div>")
+    var $newObj = $("<div class='free-table'></div>");
     $newObj.width(parseInt(obj.width));
     $newObj.height(parseInt(obj.height));
     $newObj.height(obj.height);
@@ -1974,7 +2014,16 @@ var makeDivByObject = function (obj, index) {
 
     return $newObj;
 
-}
+};
+
+var makeTabloObj = function (obj) {
+    var $newObj = $("<div class='tablo'><i class='icono-arrow1-right-up'></i></div>");
+    $newObj.attr("data-id", obj.id);
+    $newObj.css("left", obj.left);
+    $newObj.css("right", obj.right);
+    $newObj.css("top", obj.top);
+    return $newObj;
+};
 
 
 var initTables = function (data) {
@@ -1996,17 +2045,21 @@ var initObjFromImg = function () {
 
     for (var i = 0; i < window.objArr.length; i++) {
 
-        $addedDiv.append(window.objArr[i]);
+        $addedDiv.append(window.objArr[i].addClass('top'));
+        $addedDiv.append(window.objArr[i].clone().removeClass('top'));
     }
 
     $('#img-construct').append($('<div id="paths"></div>'));
+    for (var i = 0; i < tabloArr.length; i++) {
+        $('#img-construct').append(makeTabloObj(tabloArr[i]));
+    }
 }
 
 var test = function () {
     window.index = 11;
     var op = function () {
         if (window.index < 22) {
-            $('.free-table[data-room="' + window.index + '"]').fadeOut();
+            $('.free-table.top[data-room="' + window.index + '"]').fadeOut();
             window.index++;
             setTimeout(op, 200)
         }
