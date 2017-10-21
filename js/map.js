@@ -5,12 +5,12 @@ var linesArrObj = [];
 
 var getRooms = function (callback) {
     /*$.getJSON('http://localhost/rooms.json', function(data) {
-        linesArrObj = data;
-        callback();
-    });*/
+     linesArrObj = data;
+     callback();
+     });*/
     linesArrObj = [
         {
-
+            "room": 40,
             "id": 165,
             "top": "1031px",
             "left": "137px",
@@ -99,6 +99,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 32,
             "id": 160,
             "top": "880px",
             "left": "280px",
@@ -127,6 +128,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 30,
             "id": 158,
             "top": "786px",
             "left": "280px",
@@ -184,6 +186,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 31,
             "id": 159,
             "top": "819px",
             "left": "280px",
@@ -418,6 +421,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 48,
             "id": 168,
             "top": "1010px",
             "left": "17px",
@@ -446,34 +450,7 @@ var getRooms = function (callback) {
             }
         },
         {
-            "id": 166,
-            "top": "982px",
-            "left": "90px",
-            "color": "rgb(244, 231, 106)",
-            "template_id": 28,
-            "transform": "none",
-            "z_index": null,
-            "width": "42px",
-            "height": "23px",
-            "project_id": 4,
-            "type_id": 1,
-            "name": null,
-            "type": {
-                "id": 1,
-                "type": "object"
-            },
-            "template": {
-                "id": 28,
-                "json": "{\"selector\":[\"floor\"],\"arrayObj\":[{\"selector\":\"main-color\"}]}",
-                "category_id": 5,
-                "type_id": 1,
-                "template_category": {
-                    "id": 5,
-                    "icon": "\/img\/wall.svg"
-                }
-            }
-        },
-        {
+            "room": 39,
             "id": 163,
             "top": "960px",
             "left": "158px",
@@ -560,6 +537,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 46,
             "id": 164,
             "top": "983px",
             "left": "136px",
@@ -588,6 +566,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 26,
             "id": 154,
             "top": "489px",
             "left": "280px",
@@ -704,6 +683,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 28,
             "id": 156,
             "top": "690px",
             "left": "280px",
@@ -732,6 +712,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 29,
             "id": 157,
             "top": "756px",
             "left": "278px",
@@ -819,6 +800,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 47,
             "id": 167,
             "top": "982px",
             "left": "16px",
@@ -826,7 +808,7 @@ var getRooms = function (callback) {
             "template_id": 28,
             "transform": "none",
             "z_index": null,
-            "width": "71px",
+            "width": "117px",
             "height": "23px",
             "project_id": 4,
             "type_id": 1,
@@ -877,6 +859,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 49,
             "id": 169,
             "top": "1068px",
             "left": "17px",
@@ -905,6 +888,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 50,
             "id": 170,
             "top": "1135px",
             "left": "18px",
@@ -933,6 +917,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 51,
             "id": 171,
             "top": "1133px",
             "left": "50px",
@@ -961,6 +946,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 38,
             "id": 162,
             "top": "918px",
             "left": "157px",
@@ -989,6 +975,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 53,
             "id": 173,
             "top": "1159px",
             "left": "143px",
@@ -1017,6 +1004,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 54,
             "id": 174,
             "top": "1157px",
             "left": "184px",
@@ -1045,6 +1033,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 56,
             "id": 176,
             "top": "915px",
             "left": "323px",
@@ -1073,6 +1062,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 52,
             "id": 172,
             "top": "1158px",
             "left": "111px",
@@ -1101,6 +1091,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 55,
             "id": 175,
             "top": "917px",
             "left": "281px",
@@ -1129,6 +1120,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 57,
             "id": 177,
             "top": "939px",
             "left": "395px",
@@ -1157,6 +1149,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 58,
             "id": 178,
             "top": "916px",
             "left": "420px",
@@ -1185,6 +1178,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 59,
             "id": 179,
             "top": "992px",
             "left": "419px",
@@ -1213,6 +1207,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 60,
             "id": 180,
             "top": "1040px",
             "left": "420px",
@@ -1241,6 +1236,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 61,
             "id": 181,
             "top": "1091px",
             "left": "390px",
@@ -1269,6 +1265,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 62,
             "id": 182,
             "top": "1098px",
             "left": "447px",
@@ -1297,6 +1294,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 68,
             "id": 184,
             "top": "1068px",
             "left": "248px",
@@ -1325,6 +1323,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 69,
             "id": 185,
             "top": "1134px",
             "left": "221px",
@@ -1353,6 +1352,7 @@ var getRooms = function (callback) {
             }
         },
         {
+            "room": 63,
             "id": 183,
             "top": "1097px",
             "left": "511px",
@@ -1404,8 +1404,6 @@ $(function () {
     })
 
 
-
-
 });
 
 
@@ -1441,7 +1439,7 @@ var makeDivByObject = function (obj, index) {
     //safari !!
     $newObj.css('cursor', 'pointer');
 
-    $roomText = $('<div><span class="room-text">'+obj.room+'</span></div>');
+    $roomText = $('<div><span class="room-text">' + obj.room + /*' ' + obj.id +*/ '</span></div>');
 
     $newObj.append($roomText);
 

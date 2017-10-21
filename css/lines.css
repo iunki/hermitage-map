@@ -4,12 +4,7 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%;
-
-}
-
-.frame{
-    height: 1000px;
-    width: 1000px;
+    font-family: Roboto-Light, serif;
 }
 
 #img-container {
@@ -19,7 +14,6 @@ body {
     height: 100%;
     overflow: hidden;
     background-size: cover;
-    margin-top: 70px;
 }
 
 #img-container #img-construct {
@@ -51,7 +45,8 @@ body {
 }
 
 .bg-pattern {
-    background: url(/img/pattern-gray.png);
-    -webkit-background-size: cover;
-    background-size: cover;
+    /*background: url(/img/pattern-gray.png);*/
+    background-color: #D3D7DA;
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
 }
